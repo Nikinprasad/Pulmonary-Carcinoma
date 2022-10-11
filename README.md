@@ -18,6 +18,10 @@ After successful making masks next step is to build a model on 	VGG16NET transfe
   For the input layer, lung nodule CT images are used and are collected for various steps of the project. The source of the dataset is the LUNA16 dataset .
 The LUNA16 dataset  is a subset of LIDC-IDRI dataset, in which the heterogeneous scans are filtered by different criteria. Since pulmonary nodules can be very small, a thin slice should be chosen. Therefore scans with a slice thickness greater than 2.5 mm were discarded. Furthermore, scans with inconsistent slice spacing or missing slices were also excluded. This led to 888 CT scans, with a total of 36,378 annotations by radiologists. In this dataset, only the annotations categorized as nodules ≥ 3 mm are considered relevant, as the other annotations (nodules ≤ 3 mm and non-nodules) are not considered relevant for lung cancer screening protocols . Nodules found by different readers that were closer than the sum of their radii were merged. In this case, positions and diameters of these merged annotations were averaged. This results in a set of 2290, 1602, 1186 and 777 nodules annotated by at least 1, 2, 3 or 4 radiologists, respectively. In Figure 1, different slices from a LUNA16 CT scan.
 
+<a name="DATASET"></a>
+# DATASET
+<a name="DATASET-DOWNLOAD">https://drive.google.com/drive/folders/18fIC6pOrxWR5F2tfGBac4iOcLHBlb-lF?usp=sharing</a>
+
 <a name="VISUALIZATION-OF-DATASET"></a>
 # VISUALIZATION OF DATASET
 Visualization of dataset is an important part of training , it gives better understanding of dataset. But CT scan images are hard to visualize for a normal pc or any window browser. Therefore we use the pydicom library to solve this problem. The Pydicom library gives an image array and metadata information stored in CT images like patient’s name,patient’s id, patient’s birth date,image position , image number , doctor’s name , doctor’s birth date etc.
@@ -158,8 +162,3 @@ From the Results shown adobe in graphs and the comparison table we can conclude 
 Note: There were also some challanges with the dataset which can be overcomed in the future verssion code i.e. The code and the improvement in the results will be updated in the future versions of python notebooks.
 
 Note (new) : There were some updates in the codes which is updated in the newer version of the python notebook "lung_cancer.ipynb" and "Lungcancer_1.ipynb" which includes the code for lung cancer nodule detection and the older version also. This part of nodeule detection is not explained above. The link to the dataset for both the new and older python notebooks is given in the dataset folder.  
-
-<a name="CONTRIBUTORS"></a>
-# Contributors
-> Divyanshu Bhaik</br>
-> Harit Yadav
